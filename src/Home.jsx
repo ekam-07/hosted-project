@@ -37,7 +37,7 @@ const emptyForm = {
   category: 'ac',
 };
 
-// Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Bill Page Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// ── Bill Page ──
 
 function Home() {
   const { billItems, setBillItems } = useBill();
@@ -55,13 +55,13 @@ function Home() {
   const scannerRef = useRef(null);
   const fileInputRef = useRef(null);
 
-  // Ã¢â€â‚¬Ã¢â€â‚¬ Clear bill for new customer Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+  // ── Clear bill for new customer ──
   const handleClearBill = () => {
     setBillItems([]);
     setMessage('Bill cleared. Ready for next customer.');
   };
 
-  // Ã¢â€â‚¬Ã¢â€â‚¬ Fetch products Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+  // ── Fetch products ──
   const fetchProducts = async () => {
     try {
       const response = await fetch('/api/products');
@@ -77,7 +77,7 @@ function Home() {
     fetchProducts();
   }, []);
 
-  // Ã¢â€â‚¬Ã¢â€â‚¬ Scanner Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+  // ── Scanner ──
   const handleScan = async (barcode) => {
     const trimmedBarcode = String(barcode || '').trim();
     if (!trimmedBarcode) return setMessage('Scanned code is invalid. Please try again.');
@@ -405,7 +405,7 @@ function Home() {
                                 </div>
                               </div>
                               <div className="text-right">
-                                <p className="text-sm font-semibold text-emerald-400">${Number(p.price).toFixed(2)}</p>
+                                <p className="text-sm font-semibold text-emerald-400">₹{Number(p.price).toFixed(2)}</p>
                                 <p className="text-xs text-slate-500">Stock: {p.stock}</p>
                               </div>
                             </div>
@@ -428,7 +428,7 @@ function Home() {
                     ) : (
                       <div className="min-h-[200px] rounded-2xl border border-slate-800 bg-slate-950/80 p-6 text-slate-400 flex items-center justify-center text-sm">
                         {scanResult ? (
-                          <p className="text-emerald-300">Product scanned Ã¢â‚¬â€ see results below.</p>
+                          <p className="text-emerald-300">Product scanned — see results below.</p>
                         ) : (
                           <p>Camera is off. Press <span className="text-emerald-400">Start scan</span> to open the camera.</p>
                         )}
@@ -449,7 +449,7 @@ function Home() {
                         <h3 className="text-base font-semibold">Scanned product</h3>
                         <p className="mt-2 text-slate-300">Name: <span className="text-white">{scanResult.name}</span></p>
                         <p className="text-slate-300">Barcode: <span className="text-white">{scanResult.barcode}</span></p>
-                        <p className="text-slate-300">Price: <span className="text-emerald-400 font-semibold">Ã¢â€šÂ¹{Number(scanResult.price).toFixed(2)}</span></p>
+                        <p className="text-slate-300">Price: <span className="text-emerald-400 font-semibold">₹{Number(scanResult.price).toFixed(2)}</span></p>
                         <p className="text-slate-300">Stock: <span className={scanResult.stock < 3 ? 'text-amber-400 font-semibold' : 'text-white'}>{scanResult.stock}</span></p>
                         <div className="mt-3 flex flex-wrap gap-3 items-center">
                           <label className="flex items-center gap-2 text-sm text-slate-300">
@@ -485,7 +485,7 @@ function Home() {
                   </section>
                 </div>
 
-                {/* Ã¢â€â‚¬Ã¢â€â‚¬ Running Bill Ã¢â€â‚¬Ã¢â€â‚¬ */}
+                {/* ── Running Bill ── */}
                 <section className="rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-2xl shadow-black/20 sm:p-6">
                   <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
@@ -517,7 +517,7 @@ function Home() {
 
                   {billItems.length === 0 ? (
                     <div className="rounded-2xl border border-slate-800 bg-slate-950/60 px-4 py-8 text-center text-sm text-slate-500">
-                      No items yet Ã¢â‚¬â€ scan a product and press <span className="text-emerald-400">Sell</span> to add it here.
+                      No items yet — scan a product and press <span className="text-emerald-400">Sell</span> to add it here.
                     </div>
                   ) : (
                     <>
@@ -535,10 +535,10 @@ function Home() {
                             {billItems.map((item) => (
                               <tr key={item.barcode} className="text-slate-200">
                                 <td className="px-3 py-3">{item.name}</td>
-                                <td className="px-3 py-3">Ã¢â€šÂ¹{Number(item.price).toFixed(2)}</td>
+                                <td className="px-3 py-3">₹{Number(item.price).toFixed(2)}</td>
                                 <td className="px-3 py-3">{item.quantity}</td>
                                 <td className="px-3 py-3 text-right font-semibold text-emerald-400">
-                                  Ã¢â€šÂ¹{(item.price * item.quantity).toFixed(2)}
+                                  ₹{(item.price * item.quantity).toFixed(2)}
                                 </td>
                               </tr>
                             ))}
@@ -552,13 +552,13 @@ function Home() {
                           return (
                             <>
                               <div className="flex justify-between text-slate-400">
-                                <span>Subtotal</span><span>Ã¢â€šÂ¹{sub.toFixed(2)}</span>
+                                <span>Subtotal</span><span>₹{sub.toFixed(2)}</span>
                               </div>
                               <div className="flex justify-between text-slate-400">
-                                <span>Tax (8%)</span><span>Ã¢â€šÂ¹{tx.toFixed(2)}</span>
+                                <span>Tax (8%)</span><span>₹{tx.toFixed(2)}</span>
                               </div>
                               <div className="flex justify-between border-t border-slate-700 pt-2 text-base font-bold text-white">
-                                <span>Total</span><span>Ã¢â€šÂ¹{(sub + tx).toFixed(2)}</span>
+                                <span>Total</span><span>₹{(sub + tx).toFixed(2)}</span>
                               </div>
                             </>
                           );
@@ -597,7 +597,7 @@ function Home() {
                             <tr key={product.barcode} className="text-slate-200">
                               <td className="px-3 py-3">{product.name}</td>
                               <td className="px-3 py-3 font-mono text-xs text-slate-400">{product.barcode}</td>
-                              <td className="px-3 py-3">${Number(product.price).toFixed(2)}</td>
+                              <td className="px-3 py-3">₹{Number(product.price).toFixed(2)}</td>
                               <td className="px-3 py-3">{product.stock}</td>
                               <td className="px-3 py-3">
                                 <span className="text-amber-400 font-medium">Low stock</span>
@@ -633,7 +633,7 @@ function Home() {
                       <div className="grid gap-6 lg:grid-cols-2">
                         <div className="rounded-3xl border border-slate-700 bg-slate-950/90 p-6">
                           <h3 className="text-lg font-semibold">{printProduct.name}</h3>
-                          <p className="mt-3 text-slate-400">Price: ${Number(printProduct.price).toFixed(2)}</p>
+                          <p className="mt-3 text-slate-400">Price: ₹{Number(printProduct.price).toFixed(2)}</p>
                           <p className="mt-1 text-slate-400">Stock: {printProduct.stock}</p>
                           <p className="mt-3">{printProduct.details || 'No extra details.'}</p>
                         </div>
@@ -641,7 +641,7 @@ function Home() {
                           {printQrUrl ? (
                             <img className="h-64 w-64 rounded-3xl bg-white p-4" src={printQrUrl} alt="Product QR code" />
                           ) : (
-                            <div className="flex h-64 w-64 items-center justify-center rounded-3xl border border-slate-700 bg-slate-950/80 text-sm text-slate-400">Generating QRÃ¢â‚¬Â¦</div>
+                            <div className="flex h-64 w-64 items-center justify-center rounded-3xl border border-slate-700 bg-slate-950/80 text-sm text-slate-400">Generating QR…</div>
                           )}
                           <button type="button" className="w-full rounded-2xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-400 cursor-pointer" onClick={() => { window.print(); setPrintProduct(null); }}>
                             Print now

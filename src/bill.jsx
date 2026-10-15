@@ -10,7 +10,7 @@ function Bill({
   tax = 0,
   total = 0,
 }) {
-  const formatCurrency = (value) => `$${Number(value || 0).toFixed(2)}`;
+  const formatCurrency = (value) => `₹${Number(value || 0).toFixed(2)}`;
 
   return (
     <div className="mx-auto max-w-2xl rounded-3xl border border-slate-700 bg-slate-900 p-8 text-slate-100 shadow-2xl">
